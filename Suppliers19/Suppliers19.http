@@ -1,0 +1,31 @@
+@host = http://localhost:5013
+
+GET {{host}}/api/suppliers
+
+###
+POST {{host}}/api/suppliers
+Content-Type: application/json
+
+{
+  "companyName": "Папір Сервіс",
+  "contactEmail": "paper@example.com",
+  "contactPhone": "+380931234567",
+  "startDate": "2026-11-01"
+}
+
+###
+GET {{host}}/api/suppliers/3
+
+###
+PUT {{host}}/api/suppliers/3
+Content-Type: application/json
+
+{
+  "companyName": "Папір Сервіс Оновлено",
+  "contactEmail": "new@example.com",
+  "contactPhone": "+380931234567",
+  "startDate": "2026-11-01"
+}
+
+###
+DELETE {{host}}/api/suppliers/3
